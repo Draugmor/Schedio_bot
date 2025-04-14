@@ -3,7 +3,7 @@ from collections import defaultdict
 import os
 
 # Токен бота
-API_TOKEN = '7551196196:AAHa0NSUUa8p-uMVoezLgqWpzxk-SdQroOU'
+API_TOKEN = '7971823219:AAEwiY-2yyY85Fa7DKB0bcuL8X4LRJRMEHI'
 
 # Временная зона
 TIMEZONE = pytz.timezone('Europe/Moscow')

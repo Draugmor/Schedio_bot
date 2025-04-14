@@ -134,7 +134,7 @@ def get_todays_events(user_id):
     """
     creds = authenticate_google_calendar(user_id)
     if not creds:
-        raise Exception("Пользователь не аутентифицирован. Пожалуйста, авторизуйтесь через команду /relogin.")
+        return None
     service = build_calendar_service(creds)
     
     # Получаем текущую дату и время
@@ -164,7 +164,7 @@ def get_tomorrows_events(user_id):
     """
     creds = authenticate_google_calendar(user_id)
     if not creds:
-        raise Exception("Пользователь не аутентифицирован. Пожалуйста, авторизуйтесь через команду /relogin.")
+        return None
     service = build_calendar_service(creds)
     
     # Получаем текущую дату и время
@@ -194,7 +194,7 @@ def get_current_event(user_id):
     """
     creds = authenticate_google_calendar(user_id)
     if not creds:
-        raise Exception("Пользователь не аутентифицирован. Пожалуйста, авторизуйтесь через команду /relogin.")    
+        return None    
     service = build_calendar_service(creds)
     now = datetime.now(timezone.utc).isoformat()  # Текущее время в ISO 8601
 
@@ -227,7 +227,7 @@ def get_next_event(user_id):
     """
     creds = authenticate_google_calendar(user_id)
     if not creds:
-        raise Exception("Пользователь не аутентифицирован. Пожалуйста, авторизуйтесь через команду /relogin.")
+        return None
     service = build_calendar_service(creds)
     now = datetime.now(timezone.utc).isoformat()  # Текущее время в ISO 8601
 
